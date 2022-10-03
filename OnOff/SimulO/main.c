@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-#include "C:\Users\user\Desktop\Scanned\PSE\FSM_LED\OnOff\fsm\fsmonoff.c"
-#include "C:\Users\user\Desktop\Scanned\PSE\FSM_LED\OnOff\fsm\fsmonoff.h"
+#include "..\OnOff\fsm\fsmonoff.c"
+#include "..\OnOff\fsm\fsmonoff.h"
 
 int main(){
     int state = STATE_OFF;
