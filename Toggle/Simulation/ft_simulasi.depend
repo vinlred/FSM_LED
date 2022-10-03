@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1664769110 source:c:\users\user\desktop\scanned\pse\fsm\onoff\simul\ft_simulasi\ft_simulasi.c
+	<stdio.h>
+	<stdlib.h>
+	"C:\Users\user\Desktop\Scanned\PSE\FSM\OnOff\fsmtoggle\fsmtoggle.h"
+	"C:\Users\user\Desktop\Scanned\PSE\FSM\OnOff\fsmtoggle\fsmtoggle.c"
+
+1664769196 c:\users\user\desktop\scanned\pse\fsm\onoff\fsmtoggle\fsmtoggle.h
+
+1664769139 c:\users\user\desktop\scanned\pse\fsm\onoff\fsmtoggle\fsmtoggle.c
+	<stdio.h>
+	<stdlib.h>
+	"fsmtoggle.h"
+
