@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "C:\Users\user\Desktop\Scanned\PSE\FSM\OnOff\fsmtoggle\fsmtoggle.h"
-#include "C:\Users\user\Desktop\Scanned\PSE\FSM\OnOff\fsmtoggle\fsmtoggle.c"
+#include "..\fsmtoggle\fsmtoggle.h"
+#include "..\fsmtoggle\fsmtoggle.c"
 
 int main(){
     int state = STATE_OFF;
