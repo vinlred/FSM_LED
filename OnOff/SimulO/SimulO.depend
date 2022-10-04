@@ -1,8 +1,7 @@
 # depslib dependency file v1.0
-1664860578 source:c:\users\user\desktop\scanned\pse\fsm_led\onoff\simulo\main.c
+1664867234 source:c:\users\user\desktop\scanned\pse\fsm_led\onoff\simulo\main.c
 	<stdio.h>
 	<stdlib.h>
-	<windows.h>
 	"C:\Users\user\Desktop\Scanned\PSE\FSM_LED\OnOff\fsm\fsmonoff.c"
 	"C:\Users\user\Desktop\Scanned\PSE\FSM_LED\OnOff\fsm\fsmonoff.h"
 
