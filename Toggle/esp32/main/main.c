@@ -2,6 +2,8 @@
 #include "driver/gpio.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "fsmtoggle.h"
+#include "fsmtoggle.c"
 
 #define GPIO_OUTPUT 4
 #define GPIO_OUTPUT_PIN_SEL (1ULL<<GPIO_OUTPUT)
@@ -10,8 +12,6 @@
 #define DELAY_MS 150
 
 const TickType_t xDelay = DELAY_MS / portTICK_PERIOD_MS;
-
-int state = 0;
 
 void app_main(){
 	gpio_config_t io_conf;
@@ -26,20 +26,14 @@ void app_main(){
 	io_conf.pull_up_en = 1; // menggunakan pull up
 	gpio_config(&io_conf);
 	
-	uint8_t prev_state = 0;
+	int state = 0;
+	int output = 0;
+	int input = 0;
 	
 	while(1){
-		if (gpio_get_level(GPIO_INPUT_PB) == 0) {
-			vTaskDelay(xDelay);
-			prev_state = !prev_state;
-			
-			gpio_set_level(GPIO_OUTPUT, prev_state);
-			vTaskDelay(xDelay);
-		}
-		/*else{
-			prev_state = !prev_state;
-			gpio_set_level(GPIO_OUTPUT, prev_state);
-			vTaskDelay(xDelay);
-		}*/
+		input = !(gpio_get_level(GPIO_INPUT_PB));
+		fsm(&state, input, &output);
+		printf("Input: %i,Output: %i, State: %i\n", input,output,state);
+		gpio_set_level(GPIO_OUTPUT, output);
 	}
 }
