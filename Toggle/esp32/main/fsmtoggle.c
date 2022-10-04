@@ -2,22 +2,26 @@
 #include <stdlib.h>
 #include "fsmtoggle.h"
 
-void fsm(int *state, int input, int *output){
+void fsm(int *state, int input, int *output, int *debounce){
     switch(*state)
     {
     case STATE_OFF:
         {
-            if(input==1){
+			*debounce += 1;
+            if(input==1 && *debounce > 200){
                 *state=STATE_ON;
                 *output = 1;
+				*debounce = 0;
             }
             break;
         }
     case STATE_ON:
         {
-            if(input==1){
+			*debounce += 1;
+            if(input==1 && *debounce > 200){
                 *state=STATE_OFF;
                 *output = 0;
+				*debounce = 0;
             }
             break;
         }

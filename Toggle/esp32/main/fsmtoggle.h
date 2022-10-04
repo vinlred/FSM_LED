@@ -4,4 +4,4 @@
 #define STATE_OFF 0
 #endif // FSMTOGGLE_H
 
-void fsm(int *state, int input, int *output);
+void fsm(int *state, int input, int *output, int *debounce);

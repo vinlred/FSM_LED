@@ -29,10 +29,11 @@ void app_main(){
 	int state = 0;
 	int output = 0;
 	int input = 0;
+	int debounce = 0;
 	
 	while(1){
 		input = !(gpio_get_level(GPIO_INPUT_PB));
-		fsm(&state, input, &output);
+		fsm(&state, input, &output, &debounce);
 		printf("Input: %i,Output: %i, State: %i\n", input,output,state);
 		gpio_set_level(GPIO_OUTPUT, output);
 	}
