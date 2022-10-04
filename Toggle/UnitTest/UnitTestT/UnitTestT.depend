@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1664866048 source:c:\users\user\desktop\scanned\pse\fsm_led\toggle\unittest\unittestt\main.c
+	<stdio.h>
+	<stdlib.h>
+	"C:\Users\user\Desktop\Scanned\PSE\FSM_LED\Toggle\fsmtoggle\fsmtoggle.h"
+	"C:\Users\user\Desktop\Scanned\PSE\FSM_LED\Toggle\fsmtoggle\fsmtoggle.c"
+
+1664769196 c:\users\user\desktop\scanned\pse\fsm_led\toggle\fsmtoggle\fsmtoggle.h
+
+1664859643 c:\users\user\desktop\scanned\pse\fsm_led\toggle\fsmtoggle\fsmtoggle.c
+	<stdio.h>
+	<stdlib.h>
+	"fsmtoggle.h"
+
