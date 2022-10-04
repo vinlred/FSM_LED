@@ -7,17 +7,17 @@ void fsm(int *state, int input, int *output){
     {
     case STATE_OFF:
         {
-            if(input==0){}
-            else if(input==1){
+            if(input==1){
                 *state=STATE_ON;
+                *output = 1;
             }
             break;
         }
     case STATE_ON:
         {
-            if(input==0){}
-            else if(input==1){
+            if(input==1){
                 *state=STATE_OFF;
+                *output = 0;
             }
             break;
         }
