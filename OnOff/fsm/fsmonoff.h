@@ -6,4 +6,4 @@
 #define STATE_TRANS 3
 #endif // FSMONOFF_H
 
-void fsm(int input,int prev_state,int *state,int *change_count,int *output);
+void fsm(int input,int *prev_state,int *state,int *change_count,int *output);
