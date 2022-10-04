@@ -8,7 +8,7 @@ void fsm(int *state, int input, int *output, int *debounce){
     case STATE_OFF:
         {
 			*debounce += 1;
-            if(input==1 && *debounce > 200){
+            if(input==1 && *debounce > 75){
                 *state=STATE_ON;
                 *output = 1;
 				*debounce = 0;
@@ -18,7 +18,7 @@ void fsm(int *state, int input, int *output, int *debounce){
     case STATE_ON:
         {
 			*debounce += 1;
-            if(input==1 && *debounce > 200){
+            if(input==1 && *debounce > 75){
                 *state=STATE_OFF;
                 *output = 0;
 				*debounce = 0;
