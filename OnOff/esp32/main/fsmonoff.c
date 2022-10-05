@@ -18,7 +18,7 @@ void fsm(int input,int *prev_state,int *state,int *change_count,int *output){
 	}
 	case CHANGE:
 	{
-		if(*change_count <= 400){ // Jumlah diatur sesuai frekuensi untuk mencapai 1000 ms
+		if(*change_count <= 100){ // Jumlah diatur sesuai frekuensi untuk mencapai 1000 ms, Frek 100 Hz, 100 perulangan
 			if(input == 1){
 				*change_count += 1;
 			}

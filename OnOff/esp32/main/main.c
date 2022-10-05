@@ -10,6 +10,8 @@
 #define GPIO_INPUT_PB 5
 #define GPIO_INPUT_PIN_SEL (1ULL<<GPIO_INPUT_PB)
 
+const TickType_t xDelay = 10 / portTICK_PERIOD_MS; // Set Frekuensi 1/10 ms = 100 Hz
+
 void app_main(){
 	gpio_config_t io_conf;
 	io_conf.intr_type = 0;
@@ -34,5 +36,6 @@ void app_main(){
 		fsm(input, &prev_state, &state, &change_count,&output);
 		printf("Input: %i,Output: %i, State: %i\n", input,output,state);
 		gpio_set_level(GPIO_OUTPUT, output);
+		vTaskDelay(xDelay);
 	}
 }
